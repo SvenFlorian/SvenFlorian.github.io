@@ -4,8 +4,7 @@ layout: default
 
 <div class="posts">
 {% for post in site.posts %}
-<div class="poster">
-	<div class="container">
+	<div class="container post-section">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
 				<p><img src="{{ "/assets/img/user.png" | prepend: site.baseurl }}" width="50px" height="50px"> <ba>Stanley Stinson</ba></p>
@@ -18,6 +17,5 @@ layout: default
 
 		</div><!-- /row -->
 	</div> <!-- /container -->
-	</div>
 {% endfor %}
 </div>
