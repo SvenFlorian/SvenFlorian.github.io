@@ -8,10 +8,9 @@ layout: default
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
 				<p><img src="{{ "/assets/img/user.png" | prepend: site.baseurl }}" width="50px" height="50px"> <ba>Stanley Stinson</ba></p>
-				<p>{{ post.date | date: "%b %-d, %Y" }}</p>
-				<p><bd>Datum</bd></p>
-				<h4>Titel</h4>
-				<p> hejsan </p>
+				<p><bd>{{ post.date | date: "%b %-d, %Y" }}</bd></p>
+				<h4>post.title</h4>
+				<p> post.excerpt </p>
 				<p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading...</a></p>
 			</div>
 
