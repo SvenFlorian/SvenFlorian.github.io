@@ -16,3 +16,14 @@ defaults:
       path: ""
     values:
       author: "Author"
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      author: "Author of Post"
+      date: ""
+      title: ""
+      category: ""
+      tags: ""
+      
