@@ -8,3 +8,11 @@ url: "http://yourdomain.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Set defaults
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Author"
