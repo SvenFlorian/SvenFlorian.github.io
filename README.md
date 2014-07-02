@@ -7,3 +7,6 @@ This is my try at a personal page/blog using an existing bootstrap theme from [B
  *  Change it however you like
 
 All for free. In exchange, just give BlackTie.co credit for the design.
+
+
+For further development, please see [Stanley-Jekyll](https://github.com/SvenFlorian/Stanley-Jekyll).
