@@ -4,17 +4,18 @@ layout: default
 
 <div class="posts">
 {% for post in site.posts %}
-	<div class="container post-section">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
-				<p><img src="{{ "/assets/img/user.png" | prepend: site.baseurl }}" width="50px" height="50px"> <ba>Stanley Stinson</ba></p>
-				<p><bd>{{ post.date | date: "%b %-d, %Y" }}</bd></p>
-				<h4>{{ post.title }}</h4>
-				<p>{{ post.excerpt }}</p>
-				<p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading...</a></p>
-			</div>
-
-		</div><!-- /row -->
-	</div> <!-- /container -->
+	<div class="post-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<p><img src="{{ "/assets/img/user.png" | prepend: site.baseurl }}" width="50px" height="50px"> <ba>Stanley Stinson</ba></p>
+					<p><bd>{{ post.date | date: "%B %-d, %Y" }}</bd></p>
+					<h4>{{ post.title }}</h4>
+					<p>{{ post.excerpt }}</p>
+					<p><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading...</a></p>
+				</div>
+			</div><!-- /row -->
+		</div> <!-- /container -->
+	</div> <!-- /post-section -->
 {% endfor %}
 </div>
