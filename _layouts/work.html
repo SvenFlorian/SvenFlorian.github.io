@@ -2,23 +2,21 @@
 layout: my-site
 ---
 
-	<!-- +++++ Work +++++ -->
-	<div id="white">
-	    <div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<p><img src="/assets/img/user.png" width="50px" height="50px"> <ba>{{ page.author }}</ba></p>
-					<p><bd>{{ page.date | date: "%B %-d, %Y" }}</bd></p>
-					<h4>{{ page.title }}</h4>
-					<p>{% if page.img %}<img class="img-responsive" src="{{ page.img }}" alt="">{% endif %}</p>
-					<p>{{ content }}</p>
-					<br>
-					<p><bt>Category: {% for category in page.categories %} <a href="#">{{ category }}</a> {% endfor %}</bt></p>
-					<p><bt>Tags: {% for tag in page.tags %} <a href="#">{{ tag }}</a> {% endfor %}</bt></p>					
-					<hr>
-					<p><a href="/work"># Back</a></p>
-				</div>
+<!-- +++++ Projects Section +++++ -->
 
-			</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /white -->
+<div class="container pt">
+	<div class="row mt">
+		<div class="col-lg-6 col-lg-offset-3 centered">
+			<h3>{{ page.title }}</h3>
+			<hr>
+			<p>{{ page.description }}</p>
+		</div>
+	</div>
+	<div class="row mt centered">
+        <p>{{ content }}</p>
+	</div><!-- /row -->
+	<div class="row mt centered">	
+		<p><bt>Client: <a href="#">{{ page.client }}</a></bt> - <bt>Type: <a href="#">{{ page.type }}</a></bt> - <bt>Date: <a href="#">{{ page.date | date: "%B %-d, %Y" }}</a></bt></p>
+	</div>
+	
+</div><!-- /container -->

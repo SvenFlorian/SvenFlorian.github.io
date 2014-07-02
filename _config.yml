@@ -19,23 +19,10 @@ defaults:
   -
     scope:
       path: ""
-    values:
-      author: "Author"
-  - 
-    scope:
-      path: "_work"
-    values:
-      layout: "work"
-      collaborators: ""
-      short-description: ""
-      language: ""
-  -
-    scope:
-      path: ""
       type: "post"
     values:
       layout: "post"    
-      author: "Author of Post"
+      author: "Your name"
       date: ""
       title: ""
       category: ""

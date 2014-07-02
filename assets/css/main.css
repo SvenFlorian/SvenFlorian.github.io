@@ -223,7 +223,7 @@ bt {
     display:block; 
     position:relative; 
     overflow:hidden; 
-    background:transparent url(../img/loader.gif) no-repeat center;
+    background:transparent url(/assets/img/loader.gif) no-repeat center;
 }
 
 
@@ -232,7 +232,7 @@ bt {
         top:0; left:0;
         bottom:0; right:0;
         display:none;
-        background-image:url(../img/zoom.png);
+        background-image:url(/assets/img/zoom.png);
         background-repeat:no-repeat;
         background-position:center;
     }
@@ -250,4 +250,9 @@ bt {
 .glyphicon {
 	font-size: 40px;
 	color: #1abc9c;
+}
+
+/* ================== CENTER IMAGE OR TEXT ================== */
+.center-img {
+	margin:0 auto;
 }

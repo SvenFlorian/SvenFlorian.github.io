@@ -21,32 +21,17 @@ layout: default
 <!-- +++++ Projects Section +++++ -->
 
 <div class="container pt">
-	<div class="row mt centered">	
-		<div class="col-lg-4">
-			<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt="" /></a>
-			<p>APE</p>
-		</div>
-		<div class="col-lg-4">
-			<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt="" /></a>
-			<p>RAIDERS</p>
-		</div>
-		<div class="col-lg-4">
-			<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt="" /></a>
-			<p>VIKINGS</p>
-		</div>
-	</div><!-- /row -->
-	<div class="row mt centered">	
-		<div class="col-lg-4">
-			<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
-			<p>YODA</p>
-		</div>
-		<div class="col-lg-4">
-			<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
-			<p>EMPERORS</p>
-		</div>
-		<div class="col-lg-4">
-			<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
-			<p>CHIEFS</p>
-		</div>
-	</div><!-- /row -->
+	{% for work in site.work %}
+		{% if work.published == true %}
+			{% cycle 'add rows': '<div class="row mt centered">', nil, nil %}
+		
+				<div class="col-lg-4">
+					<a class="zoom green" href="{{ work.url | prepend: site.baseurl }}"><img class="img-responsive" src="{{ work.img }}" alt="" /></a>
+					<p>{{ work.title }}</p>
+				</div>
+			
+			{% cycle 'close rows': nil, nil, '</div>' %}
+		{% endif %}
+	{% endfor %}
+	{% cycle 'close rows': nil, '</div>', '</div>' %}
 </div><!-- /container -->
